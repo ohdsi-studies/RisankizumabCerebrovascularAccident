@@ -7,7 +7,7 @@ Risk of Cerebrovascular Accident and Major Adverse Cardiovascular Events associa
 - Study type: **-**
 - Tags: **-**
 - Study lead: **-**
-- Study lead forums tag: **[[Lead tag]](https://forums.ohdsi.org/u/[Lead tag])**
+- Study lead forums tag: **[[Lead tag]](https://forums.ohdsi.org/u/zenasyiu)**
 - Study start date: **-**
 - Study end date: **-**
 - Protocol: **-**
