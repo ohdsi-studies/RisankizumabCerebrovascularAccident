@@ -6,7 +6,7 @@ Risk of Cerebrovascular Accident and Major Adverse Cardiovascular Events associa
 - Analytics use case(s): **-**
 - Study type: **-**
 - Tags: **-**
-- Study lead: **-**
+- Study lead: Zenas Yiu
 - Study lead forums tag: **[[Zenas Yiu]](https://forums.ohdsi.org/u/zenasyiu)**
 - Study start date: **-**
 - Study end date: **-**
