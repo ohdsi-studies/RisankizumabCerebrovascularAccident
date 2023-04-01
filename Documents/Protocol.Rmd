@@ -1,5 +1,5 @@
 ---
-title: "| RESEARCH PROTOCOL\n| \n| Study Repo Template \n"
+title: "| RESEARCH PROTOCOL\n|Risk of Cerebrovascular Accident and Major Adverse Cardiovascular Events associated with Risankizumab for Psoriasis: Protocol for an OHDSI Network Comparative Safety Study \n| Study Repo Template \n"
 fontsize: 12pt
 geometry: margin=1in
 output:
@@ -80,7 +80,15 @@ latex_table_font_size <- 8
 
 ```{r abbreviations, echo=FALSE}
 abbreviations <- readr::read_delim(col_names = FALSE, delim = ";", trim_ws = TRUE, file = "
-  CDM; Common data model
+CDM	Common Data Model
+CVA	Cerebrovascular accident
+IL	Interleukin
+MACE	Major adverse cardiovascular events
+OMOP	Observational Medical Outcomes Partnership
+OHDSI	Observational Health Data Science and Informatics
+RxNorm	US-specific terminology that contains all medications available on the US market
+SNOMED	Systematized Nomenclature of Medicine
+TIA	Transient Ischaemic Attack
 ")
 
 tab <- kable(abbreviations, col.names = NULL, linesep = "", booktabs = TRUE)
@@ -102,7 +110,7 @@ if (knitr::is_latex_output()) {
 ```{r parties, echo=FALSE}
 parties <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Investigator; Institution/Affiliation
-  Joe Bruin *; Department of Biostatistics, University of California, Los Angeles, Los Angeles, CA, USA
+  Zenas Yiu *; Dermatology, University of Manchester, UK
 ")
 
 tab <- kable(parties, booktabs = TRUE, linesep = "") %>%
@@ -121,7 +129,6 @@ if (knitr::is_latex_output()) {
 ## Disclosures
 
 This study is undertaken within Observational Health Data Sciences and Informatics (OHDSI), an open collaboration.
-**JB** is a fictional character.
 
 \clearpage
 
@@ -179,7 +186,21 @@ if (knitr::is_latex_output()) {
 
 # Rationale and Background
 
+Psoriasis is a common chronic inflammatory skin condition affecting an estimated 60 million people worldwide1, 2. People with plaque psoriasis, the most common subtype, suffer from red raised plaques with adherent silvery scales on the trunk and limbs, often in conjunction with redness and scaling in high-impact sites such as the scalp, hands, nails, face, and genital area1. Besides the physical symptoms of pain, itching, and discomfort, people with psoriasis suffer from a high psychosocial burden and stigma with a significant reduction in their quality of life3-5.
+
+Inflammation in psoriasis has effects beyond the skin. It is associated with multiple comorbid conditions, including psoriatic arthritis; diabetes and metabolic syndrome; inflammatory bowel disease; and hepatic disease6, with an associated increase in all-cause mortality7, 8. Myocardial infarction9 and stroke10, which share similar etiologies through atherosclerosis, are also key associations with psoriasis, with upregulated immunological pro-inflammatory pathways common to both conditions11, 12 while people with psoriasis also have higher rates of predisposing factors such as  smoking and alcohol intake13.
+
+There are currently 20 different medicines available for people suffering from moderate-to-severe psoriasis14. Biologic medicines, which are antibody based injectable treatments targeting key cytokines in the inflammatory cascade, form most of these treatment options. Risankizumab (SKYRIZI®) is a 12 weekly biologic that targets interleukin(IL)-23, and was identified in a Cochrane network meta-analysis as one of the most effective drugs for psoriasis14. Importantly, no significant safety signals emerged from analyses of 17 clinical trials of Risankizumab in people with psoriasis15.
+
+However, a recent disproportionality analysis of the US Food and Drug Administration Adverse Event Reporting System (FAERS) found that risankizumab was associated with significantly disproportionate cerebrovascular reporting compared to other psoriasis treatments, including guselkumab, another IL-23 inhibitor16, which was previously unreported. This led to a commentary suggesting that dermatologists may now be less likely to prescribe this highly effective treatment, in particular avoiding risankizumab in people with a high cardiovascular risk profile17. The same authors call for multi-national observational studies to fully understand this potential safety issue17. This safety signal is not expected, as IL-23 is thought to be a driver for ischaemic tissue damage in stroke, and pharmacological blockade of IL-23 in mouse models lead to reduced cerebral infarction18.
+
 # Study Objectives
+
+The primary objective of the study is to evaluate the risk of cerebrovascular accident, and related major adverse cardiovascular events (MACE) in people with psoriasis on Risankizumab. 
+
+We will do this by: 
+1.	comparing them with people with psoriasis on other IL-23 inhibitors to identify whether any increase in risk is specific to the drug itself rather than the drug class; and
+2.	comparing them with people with psoriasis on other classes of biologic therapies to identify whether inhibition of IL-23 contributes to the increase in risk  
 
 # Research Methods
 

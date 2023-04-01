@@ -3,12 +3,12 @@ Risk of Cerebrovascular Accident and Major Adverse Cardiovascular Events associa
 
 <img src="https://img.shields.io/badge/Study%20Status-Repo%20Created-lightgray.svg" alt="Study Status: Repo Created">
 
-- Analytics use case(s): **-**
-- Study type: Population Estimation: Comparative Safety
+- Analytics use case(s): ****
+- Study type: **Population Estimation: Comparative Safety**
 - Tags: **-**
-- Study lead: Zenas Yiu
+- Study lead: **Zenas Yiu**
 - Study lead forums tag: **[[Zenas Yiu]](https://forums.ohdsi.org/u/zenasyiu)**
-- Study start date: **-**
+- Study start date: **28-03-2023**
 - Study end date: **-**
 - Protocol: **-**
 - Publications: **-**
