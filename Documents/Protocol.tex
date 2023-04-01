@@ -1,0 +1,543 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{mwe,tikz}
+\usepackage[percent]{overpic}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\footerDate}{28-Mar-2023}
+\input{header.tex}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{RESEARCH PROTOCOL
+
+\textbar Risk of Cerebrovascular Accident and Major Adverse Cardiovascular Events associated with Risankizumab for Psoriasis: Protocol for an OHDSI Network Comparative Safety Study
+\textbar{} Study Repo Template}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Version: 0.0.1}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{fancy} % from title.tex
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{list-of-abbreviations}{%
+\section{List of Abbreviations}\label{list-of-abbreviations}}
+
+\begin{table}[!h]
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}{l}
+\toprule
+\cellcolor{gray!6}{CDM  Common Data Model}\\
+CVA Cerebrovascular accident\\
+\cellcolor{gray!6}{IL   Interleukin}\\
+MACE    Major adverse cardiovascular events\\
+\cellcolor{gray!6}{OMOP Observational Medical Outcomes Partnership}\\
+OHDSI   Observational Health Data Science and Informatics\\
+\cellcolor{gray!6}{RxNorm   US-specific terminology that contains all medications available on the US market}\\
+SNOMED  Systematized Nomenclature of Medicine\\
+\cellcolor{gray!6}{TIA  Transient Ischaemic Attack}\\
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\clearpage
+
+\hypertarget{responsible-parties}{%
+\section{Responsible Parties}\label{responsible-parties}}
+
+\hypertarget{investigators}{%
+\subsection{Investigators}\label{investigators}}
+
+\begin{verbatim}
+## Rows: 1 Columns: 2
+## -- Column specification --------------------------------------------------------
+## Delimiter: ";"
+## chr (2): Investigator, Institution/Affiliation
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{table}[!h]
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}{>{\raggedright\arraybackslash}p{10em}>{\raggedright\arraybackslash}p{35em}}
+\toprule
+Investigator & Institution/Affiliation\\
+\midrule
+\cellcolor{gray!6}{Zenas Yiu *} & \cellcolor{gray!6}{Dermatology, University of Manchester, UK}\\
+\bottomrule
+\multicolumn{2}{l}{\rule{0pt}{1em}* Principal Investigator}\\
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\hypertarget{disclosures}{%
+\subsection{Disclosures}\label{disclosures}}
+
+This study is undertaken within Observational Health Data Sciences and Informatics (OHDSI), an open collaboration.
+
+\clearpage
+
+\hypertarget{abstract}{%
+\section{Abstract}\label{abstract}}
+
+\textbf{Background and Significance}:
+
+\textbf{Study Aims}:
+
+\textbf{Study Description}:
+
+\begin{itemize}
+\item
+  \textbf{Population}:
+\item
+  \textbf{Comparators}:
+\item
+  \textbf{Outcomes}:
+\item
+  \textbf{Design}:
+\item
+  \textbf{Timeframe}:
+\end{itemize}
+
+\clearpage
+
+\hypertarget{amendments-and-updates}{%
+\section{Amendments and Updates}\label{amendments-and-updates}}
+
+\begin{verbatim}
+## Rows: 0 Columns: 5
+## -- Column specification --------------------------------------------------------
+## Delimiter: ";"
+## chr (5): Number, Date, Section of study protocol, Amendment or update, Reason
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{table}[!h]
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lllll}
+\toprule
+\cellcolor{gray!6}{Number} & \cellcolor{gray!6}{Date} & \cellcolor{gray!6}{Section of study protocol} & \cellcolor{gray!6}{Amendment or update} & \cellcolor{gray!6}{Reason}\\
+
+
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\hypertarget{milestones}{%
+\section{Milestones}\label{milestones}}
+
+\begin{verbatim}
+## Rows: 0 Columns: 2
+## -- Column specification --------------------------------------------------------
+## Delimiter: ";"
+## chr (2): Milestone, Planned / actual date
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{table}[!h]
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}{ll}
+\toprule
+\cellcolor{gray!6}{Milestone} & \cellcolor{gray!6}{Planned / actual date}\\
+
+
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\hypertarget{rationale-and-background}{%
+\section{Rationale and Background}\label{rationale-and-background}}
+
+Psoriasis is a common chronic inflammatory skin condition affecting an estimated 60 million people worldwide1, 2. People with plaque psoriasis, the most common subtype, suffer from red raised plaques with adherent silvery scales on the trunk and limbs, often in conjunction with redness and scaling in high-impact sites such as the scalp, hands, nails, face, and genital area1. Besides the physical symptoms of pain, itching, and discomfort, people with psoriasis suffer from a high psychosocial burden and stigma with a significant reduction in their quality of life3-5.
+
+Inflammation in psoriasis has effects beyond the skin. It is associated with multiple comorbid conditions, including psoriatic arthritis; diabetes and metabolic syndrome; inflammatory bowel disease; and hepatic disease6, with an associated increase in all-cause mortality7, 8. Myocardial infarction9 and stroke10, which share similar etiologies through atherosclerosis, are also key associations with psoriasis, with upregulated immunological pro-inflammatory pathways common to both conditions11, 12 while people with psoriasis also have higher rates of predisposing factors such as smoking and alcohol intake13.
+
+There are currently 20 different medicines available for people suffering from moderate-to-severe psoriasis14. Biologic medicines, which are antibody based injectable treatments targeting key cytokines in the inflammatory cascade, form most of these treatment options. Risankizumab (SKYRIZI®) is a 12 weekly biologic that targets interleukin(IL)-23, and was identified in a Cochrane network meta-analysis as one of the most effective drugs for psoriasis14. Importantly, no significant safety signals emerged from analyses of 17 clinical trials of Risankizumab in people with psoriasis15.
+
+However, a recent disproportionality analysis of the US Food and Drug Administration Adverse Event Reporting System (FAERS) found that risankizumab was associated with significantly disproportionate cerebrovascular reporting compared to other psoriasis treatments, including guselkumab, another IL-23 inhibitor16, which was previously unreported. This led to a commentary suggesting that dermatologists may now be less likely to prescribe this highly effective treatment, in particular avoiding risankizumab in people with a high cardiovascular risk profile17. The same authors call for multi-national observational studies to fully understand this potential safety issue17. This safety signal is not expected, as IL-23 is thought to be a driver for ischaemic tissue damage in stroke, and pharmacological blockade of IL-23 in mouse models lead to reduced cerebral infarction18.
+
+\hypertarget{study-objectives}{%
+\section{Study Objectives}\label{study-objectives}}
+
+The primary objective of the study is to evaluate the risk of cerebrovascular accident, and related major adverse cardiovascular events (MACE) in people with psoriasis on Risankizumab.
+
+We will do this by:
+1. comparing them with people with psoriasis on other IL-23 inhibitors to identify whether any increase in risk is specific to the drug itself rather than the drug class; and
+2. comparing them with people with psoriasis on other classes of biologic therapies to identify whether inhibition of IL-23 contributes to the increase in risk
+
+\hypertarget{research-methods}{%
+\section{Research Methods}\label{research-methods}}
+
+This study is a multinational cohort study evaluating the risk of cerebrovascular accident, along with secondary outcomes of MACE (composite outcome including acute myocardial infarction, acute coronary syndrome or ischaemic heart disease, cerebrovascular accident {[}ischaemic or hemorrhagic stroke{]}, revascularization procedures, and cardiovascular or stroke death) in two different populations:
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\tightlist
+\item
+  People with psoriasis
+\item
+  People with psoriasis with high cardiovascular risk profile
+\end{enumerate}
+
+And in two different comparative cohort studies:
+
+A: People on Risankizumab vs People on Guselkumab/Tildrakizumab
+B: People on IL-23 inhibitors vs People on TNF inhibitors vs People on IL-17 inhibitors
+
+\hypertarget{study-design}{%
+\subsection{Study Design}\label{study-design}}
+
+This study uses \texttt{CohortMethod} {[}\protect\hyperlink{ref-Schuemie2020-fa}{1}{]}.
+
+\hypertarget{data-sources}{%
+\subsection{Data Sources}\label{data-sources}}
+
+The study will be conducted using data from real world data sources that have been mapped to the OMOP Common Data Model in collaboration with the Observational Health Data Sciences and Informatics (OHDSI) and European Health Data and Evidence Network (EHDEN) initiatives. The OMOP Common Data Model (\url{https://github.com/OHDSI/CommonDataModel/wiki}) includes a standard representation of health care trajectories (such as information related to drug utilization and condition occurrence), as well as common vocabularies for coding clinical concepts, and enables consistent application of analyses across multiple disparate data sources19.
+
+\hypertarget{study-population-exposure-comparators}{%
+\subsection{Study Population, Exposure Comparators}\label{study-population-exposure-comparators}}
+
+Psoriasis cohorts -- all people
+
+Target Cohort \#1 RISANKIZUMAB: People starting a drug exposure of risankizumab:
+● For the first time in the person's history
+● occurrence start is on or after 2019-04-01
+AND
+• has prior psoriasis
+• no prior history of haemorrhagic or non-haemorrhagic stroke, or transient ischaemic attack (TIA)
+• no prior history of treatment with guselkumab or tildrakizumab
+
+Target Cohort \#2 OTHER IL-23 INHIBITORS: People starting a drug exposure of either guselkumab or tildrakizumab
+● For the first time in the person's history
+● occurrence start is on or after 2019-04-01
+AND
+• has prior psoriasis
+• no prior history of haemorrhagic or non-haemorrhagic stroke, or transient ischaemic attack (TIA)
+• no prior history of treatment with risankizumab
+
+Target Cohort \#3 ALL IL-23 INHIBITORS: People starting a drug exposure of either risankizumab, guselkumab or tildrakizumab
+● For the first time in the person's history
+● occurrence start is on or after 2019-04-01
+AND
+• has prior psoriasis
+• no prior history of haemorrhagic or non-haemorrhagic stroke, or transient ischaemic attack (TIA)
+• no prior use of the pair-wise comparator
+
+Target Cohort \#4 TNF INHIBITORS: People starting a drug exposure of either adalimumab, etanercept, infliximab, or certolizumab
+● For the first time in the person's history
+● occurrence start is on or after 2019-04-01
+AND
+• has prior psoriasis
+• no prior history of haemorrhagic or non-haemorrhagic stroke, or transient ischaemic attack (TIA)
+• no prior use of the pair-wise comparator
+
+Target Cohort \#5 IL-17 INHIBITORS: People starting a drug exposure of either secukinumab, ixekizumab, brodalumab, or bimekizumab
+● For the first time in the person's history
+● occurrence start is on or after 2019-04-01
+AND
+• has prior psoriasis
+• no prior history of haemorrhagic or non-haemorrhagic stroke, or transient ischaemic attack (TIA)
+• no prior use of the pair-wise comparator
+
+Each cohort will be identified with the additional restriction of having a minimum of 365 days of prior observation time available to characterize incident cohorts.
+
+\hypertarget{outcomes}{%
+\subsection{Outcomes}\label{outcomes}}
+
+Outcome \#1 -- Cerebrovascular accident
+
+People having first occurrence of
+• Ischemic or haemorrhagic stroke
+• condition type is any of: Inpatient detail - primary, Inpatient header - primary, Primary Condition, Inpatient detail - 1st position, Inpatient header - 1st position
+• visit occurrence is any of: Emergency Room Visit, Inpatient Visit
+with continuous observation of at least 0 days prior and 0 days after event index date, and limit initial events to: earliest event per person.
+
+Outcome \#2 -- Ischaemic strokes
+People having first occurrence of
+• Ischemic stroke
+• condition type is any of: Inpatient detail - primary, Inpatient header - primary, Primary Condition, Inpatient detail - 1st position, Inpatient header - 1st position
+• visit occurrence is any of: Emergency Room Visit, Inpatient Visit
+with continuous observation of at least 0 days prior and 0 days after event index date, and limit initial events to: earliest event per person.
+
+Outcome \#3 -- Major Adverse Cardiovascular Event (MACE)
+People having first occurrence of
+• either acute myocardial infarction, acute coronary syndrome or ischaemic heart disease, cerebrovascular accident {[}ischaemic or hemorrhagic stroke{]}, revascularization procedures, and cardiovascular or stroke death
+• condition type is any of: Inpatient detail - primary, Inpatient header - primary, Primary Condition, Inpatient detail - 1st position, Inpatient header - 1st position
+• visit occurrence is any of: Emergency Room Visit, Inpatient Visit
+with continuous observation of at least 0 days prior and 0 days after event index date, and limit initial events to: earliest event per person.
+
+\hypertarget{analysis}{%
+\subsection{Analysis}\label{analysis}}
+
+The following features will be identified to adjust for as confounders. These will be described as assessed in different time windows: the year (-1 to -365 days), and each patient's full history pre-index:
+
+Demographics:
+● Age: calculated as (year of cohort start date -- year of birth) and with 5 year groupings
+● Sex
+● Race
+● Body mass index
+● Smoking
+● Alcohol intake
+
+Concept-based:
+● Psoriasis Arthritis
+● Atrial fibrillation / flutter
+● Diabetes
+● Chronic heart failure
+● Hypertension
+● End stage / chronic renal disease
+● Pulmonary embolism
+● Deep vein thrombosis
+● Myocardial infarction
+● Coronary artery disease
+● Peripheral artery disease
+● Aortic plaque
+● Statin use within the previous year
+● Condition groups (SNOMED + descendants), \textgreater=1 occurrence during the interval
+● Drug era groups (ATC/RxNorm + descendants), \textgreater=1 day during the interval which overlaps with at least 1 drug era
+
+All analyses will be performed using code developed for the OHDSI Methods library. The code for this study can be found at \url{https://github.com/ohdsi-studies/}. A diagnostic package, built off the OHDSI Cohort Diagnostics (\url{https://ohdsi.github.io/CohortDiagnostics/}) library, is included in the base package as a preliminary step to assess the fitness of use of phenotypes on your database. If a database passes cohort diagnostics, the full study package will be executed. Baseline covariates will be extracted using an optimized SQL extraction script based on principles of the Feature Extraction package (\url{http://ohdsi.github.io/FeatureExtraction/}) to quantify Demographics (Gender, Prior Observation Time, Age Group), Condition Group Eras and Drug Group Eras (at the above-listed time windows). Additional cohort-specific covariates will be constructed using OMOP standard vocabulary concepts.
+
+The cohorts will be matched by propensity score using the identified features. Cox proportional hazards models will be fitted to calculate the time-to-event of the earliest outcome, with the patient censored at the first of the following: end of the treatment exposure; end of observational period; death due to non cardiovascular or cerebrovascular causes.
+
+Random effects meta-analysis will be conducted to pool the evidence across the databases.
+
+Complete case analysis will be used.
+
+\hypertarget{sample-size}{%
+\section{Sample Size and Study Power}\label{sample-size}}
+
+The study package is designed to suppress any analyses which have less than 140 unique persons. This cut point was informed by a power calculation performed by the OHDSI COVID Consortia to assess the computational cut point of when a cell count would be too small to merit additional subdivision within the target-stratum-feature combination. This means that each data owner will only generate results for target-stratum-feature pairs that meet this minimum threshold.
+
+\hypertarget{strengths-limitations}{%
+\section{Strengths and Limitations}\label{strengths-limitations}}
+
+We hope to generate the world's largest observational sets of analyses of secondary health data for psoriasis. The use of a common data model and standard vocabularies ensures interoperability and portability of phenotypes utilized in this analysis. The use of a federated study model will ensure no movement of patient-level data from institutions participating in this analysis. This is critically important to ensure the protection of patient privacy in the secondary use of routinely collected patient data. Data custodians will remain in control of the analysis run on these data and will conduct their own site-based validation processes to evaluate case reports against public health reporting.
+
+Condition phenotyping may be inaccurate as it is based on the presence of condition and medication codes, with the absence of such records taken to indicate the absence of a disease. Furthermore, medication records indicate that an individual was prescribed or dispensed a particular drug, but this does not necessarily mean that an individual took the drug as originally prescribed or dispensed. Our study could be subject to exposure misclassification with false positives if a patient had a dispensing but did not injectthe drug but may also be subject to false negatives for non-adherent patients who continued their medication beyond the days supply due to stockpiling. Medication use estimates on the date of hospitalization is particularly sensitive to misclassification and may conflate baseline concomitant drug history with immediate treatment upon admission. Finally, patient data in different healthcare systems, settings or geographies may follow distinct subpopulations along (parts of) their disease-related trajectory; combining such data calls for careful diagnostics to avoid biases.
+
+\hypertarget{protection-of-human-subjects}{%
+\section{Protection of Human Subjects}\label{protection-of-human-subjects}}
+
+The study uses only de-identified data. Confidentiality of patient records will be maintained at all times. Data custodians will remain in full control of executing the analysis and packaging results. There will be no transmission of patient-level data at any time during these analyses. Only aggregate statistics will be captured. Study packages will contain minimum cell count parameters to obscure any cells which fall below allowable reportable limits. All study reports will only contain aggregated data and will not identify individual patients or physicians.
+
+\hypertarget{management-and-reporting-of-adverse-events-and-adverse-reactions}{%
+\section{Management and Reporting of Adverse Events and Adverse Reactions}\label{management-and-reporting-of-adverse-events-and-adverse-reactions}}
+
+This study will provide an estimate of an important potential adverse event associated with biologic therapies. The results from this study will be published in a high-ranking academic journal for widespread dissemination.
+
+\hypertarget{plans-for-disseminating-and-communicating-study-results}{%
+\section{Plans for Disseminating and Communicating Study Results}\label{plans-for-disseminating-and-communicating-study-results}}
+
+The results will be shared and discussed among study participants during the time of research. Study results will be posted on the OHDSI website (\url{https://data.ohdsi.org/}) after completion of the study. The results will also be presented at the OHDSI in-person or virtual events. Finally, we plan to publish this research as a scientific manuscript in a top-tier journal.
+
+\clearpage
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Griffiths CEM, Armstrong AW, Gudjonsson JE, Barker J. Psoriasis. Lancet. Apr 3 2021;397(10281):1301-1315. \url{doi:10.1016/S0140-6736(20)32549-6}
+\item
+  Parisi R, Iskandar IYK, Kontopantelis E, et al.~National, regional, and worldwide epidemiology of psoriasis: systematic analysis and modelling study. BMJ. May 28 2020;369:m1590. \url{doi:10.1136/bmj.m1590}
+\item
+  Kimball AB, Jacobson C, Weiss S, Vreeland MG, Wu Y. The psychosocial burden of psoriasis. Am J Clin Dermatol. 2005;6(6):383-92. \url{doi:10.2165/00128071-200506060-00005}
+\item
+  Rapp SR, Feldman SR, Exum ML, Fleischer AB, Jr., Reboussin DM. Psoriasis causes as much disability as other major medical diseases. J Am Acad Dermatol. Sep 1999;41(3 Pt 1):401-7. \url{doi:10.1016/s0190-9622(99)70112-x}
+\item
+  Richards HL, Fortune DG, Griffiths CE, Main CJ. The contribution of perceptions of stigmatisation to disability in patients with psoriasis. J Psychosom Res. Jan 2001;50(1):11-5. \url{doi:10.1016/s0022-3999(00)00210-5}
+\item
+  Elmets CA, Leonardi CL, Davis DMR, et al.~Joint AAD-NPF guidelines of care for the management and treatment of psoriasis with awareness and attention to comorbidities. J Am Acad Dermatol. Apr 2019;80(4):1073-1113. \url{doi:10.1016/j.jaad.2018.11.058}
+\item
+  Abuabara K, Azfar RS, Shin DB, Neimann AL, Troxel AB, Gelfand JM. Cause-specific mortality in patients with severe psoriasis: a population-based cohort study in the U.K. Br J Dermatol. Sep 2010;163(3):586-92. \url{doi:10.1111/j.1365-2133.2010.09941.x}
+\item
+  Springate DA, Parisi R, Kontopantelis E, Reeves D, Griffiths CE, Ashcroft DM. Incidence, prevalence and mortality of patients with psoriasis: a U.K. population-based cohort study. Br J Dermatol. Mar 2017;176(3):650-658. \url{doi:10.1111/bjd.15021}
+\item
+  Gelfand JM, Neimann AL, Shin DB, Wang X, Margolis DJ, Troxel AB. Risk of myocardial infarction in patients with psoriasis. JAMA. Oct 11 2006;296(14):1735-41. \url{doi:10.1001/jama.296.14.1735}
+\item
+  Gelfand JM, Dommasch ED, Shin DB, et al.~The risk of stroke in patients with psoriasis. J Invest Dermatol. Oct 2009;129(10):2411-8. \url{doi:10.1038/jid.2009.112}
+\item
+  Spah F. Inflammation in atherosclerosis and psoriasis: common pathogenic mechanisms and the potential for an integrated treatment approach. Br J Dermatol. Aug 2008;159 Suppl 2:10-7. \url{doi:10.1111/j.1365-2133.2008.08780.x}
+\item
+  Armstrong AW, Voyles SV, Armstrong EJ, Fuller EN, Rutledge JC. A tale of two plaques: convergent mechanisms of T-cell-mediated inflammation in psoriasis and atherosclerosis. Exp Dermatol. Jul 2011;20(7):544-9. \url{doi:10.1111/j.1600-0625.2011.01308.x}
+\item
+  Poikolainen K, Karvonen J, Pukkala E. Excess mortality related to alcohol and smoking among hospital-treated patients with psoriasis. Arch Dermatol. Dec 1999;135(12):1490-3. \url{doi:10.1001/archderm.135.12.1490}
+\item
+  Sbidian E, Chaimani A, Garcia-Doval I, et al.~Systemic pharmacological treatments for chronic plaque psoriasis: a network meta-analysis. Cochrane Database Syst Rev.~May 23 2022;5(5):CD011535. \url{doi:10.1002/14651858.CD011535.pub5}
+\item
+  Gordon KB, Lebwohl M, Papp KA, et al.~Long-term safety of risankizumab from 17 clinical trials in patients with moderate-to-severe plaque psoriasis. Br J Dermatol. Mar 2022;186(3):466-475. \url{doi:10.1111/bjd.20818}
+\item
+  Woods RH. Potential cerebrovascular accident signal for risankizumab: A disproportionality analysis of the FDA Adverse Event Reporting System (FAERS). Br J Clin Pharmacol. Nov 2 2022;\url{doi:10.1111/bcp.15581}
+\item
+  Egeberg A, Thyssen JP. Increased reporting of cerebrovascular accidents with use of risankizumab observed in the FDA Adverse Events Reporting System (FAERS). Br J Dermatol. Feb 17 2023;\url{doi:10.1093/bjd/ljad039}
+\item
+  Egeberg A, Gisondi P, Carrascosa JM, Warren RB, Mrowietz U. The role of the interleukin-23/Th17 pathway in cardiometabolic comorbidity associated with psoriasis. J Eur Acad Dermatol Venereol. Aug 2020;34(8):1695-1706. \url{doi:10.1111/jdv.16273}
+\item
+  Voss EA, Makadia R, Matcho A, et al.~Feasibility and utility of applications of the common data model to multiple, disparate observational health databases. J Am Med Inform Assoc. May 2015;22(3):553-64. \url{doi:10.1093/jamia/ocu023}
+\end{enumerate}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Schuemie2020-fa}{}}%
+\CSLLeftMargin{1 }%
+\CSLRightInline{Schuemie M, Suchard M, Ryan P. {CohortMethod}: New-user cohort method with large scale propensity and outcome models. 2020.}
+
+\end{CSLReferences}
+
+\clearpage
+
+\centerline{\Huge Appendix}
+
+\hypertarget{appendix-appendix}{%
+\appendix}
+
+
+\hypertarget{exposure-cohort-definitions}{%
+\section{Exposure Cohort Definitions}\label{exposure-cohort-definitions}}
+
+\hypertarget{outcome-cohort-definitions}{%
+\section{Outcome Cohort Definitions}\label{outcome-cohort-definitions}}
+
+\hypertarget{negative-controls}{%
+\section{Negative Control Concepts}\label{negative-controls}}
+
+\end{document}
